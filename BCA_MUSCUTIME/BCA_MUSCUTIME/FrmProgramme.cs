@@ -519,6 +519,11 @@ namespace BCA_MUSCUTIME
             nom = DonnéesPubliques.nom;
             NomProg();
             defaultvisible();
+            InfoDevCouche();
+            InfoCourse();
+            InfoPompes();
+            InfoSquats();
+            InfoTractions();
         }
         void defaultvisible()
         {
@@ -794,6 +799,7 @@ namespace BCA_MUSCUTIME
             #endregion
         }
 
+        #region Load Hide CLick DEL
         private void Pbx_POS1_CLOSE_Click(object sender, EventArgs e)
         {
             PbxTractions_POS1.Visible = false;
@@ -842,9 +848,24 @@ namespace BCA_MUSCUTIME
             PbxDevCouche_POS5.Visible = false;
             PbxCourse_POS5.Visible = false;
             Pbx_POS5_CLOSE.Visible = false;
-        }
+        } 
+        #endregion
 
-        private void PbxInfoCourse_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+             this.Close();
+            DonnéesPubliques.Insert = true;
+            MaConnexion();
+            InsertFinal();
+            MaDeconnexion();
+            String PrgInsere = "> Premier exercice : " + DonnéesPubliques.EXO1 + "\n> Deuxième exercice : " + DonnéesPubliques.EXO2 + "\n> Troisième exercice : " + DonnéesPubliques.EXO3 + "\n> Quatrième exercice : " + DonnéesPubliques.EXO4 + "\n> Cinquième exercice : " + DonnéesPubliques.EXO5;
+            MessageBox.Show(PrgInsere, "Votre programme : " + nom, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Owner.Show();
+            
+        }
+        public void InfoCourse()
         {
             MaConnexion();
             #region exécution de la requête de selection : nombre de villageois
@@ -866,7 +887,7 @@ namespace BCA_MUSCUTIME
                 while (SdrListe.Read())
                 {
                     nb1 = "Description de l'exercice " + SdrListe["NOM"] + "\nNom : " + SdrListe["NOM"] + "\nDurée : " + SdrListe["DUREE"] + "\nDescription :  " + SdrListe["DESCRIPTION"];
-                    MessageBox.Show(nb1, "OK");
+                    this.toolTip2.SetToolTip(this.PbxCourse,nb1);
                 }
 
             }
@@ -877,21 +898,7 @@ namespace BCA_MUSCUTIME
             #endregion
             MaDeconnexion();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-             this.Close();
-            DonnéesPubliques.Insert = true;
-            MaConnexion();
-            InsertFinal();
-            MaDeconnexion();
-            String PrgInsere = "> Premier exercice : " + DonnéesPubliques.EXO1 + "\n> Deuxième exercice : " + DonnéesPubliques.EXO2 + "\n> Troisième exercice : " + DonnéesPubliques.EXO3 + "\n> Quatrième exercice : " + DonnéesPubliques.EXO4 + "\n> Cinquième exercice : " + DonnéesPubliques.EXO5;
-            MessageBox.Show(PrgInsere, "Votre programme : " + nom, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Owner.Show();
-            
-        }
-
-        private void PbxInfoDevCouche_Click(object sender, EventArgs e)
+        public void InfoDevCouche()
         {
             MaConnexion();
             #region exécution de la requête de selection : nombre de villageois
@@ -913,7 +920,7 @@ namespace BCA_MUSCUTIME
                 while (SdrListe.Read())
                 {
                     nb1 = "Description de l'exercice " + SdrListe["NOM"] + "\nNom : " + SdrListe["NOM"] + "\nDurée : " + SdrListe["DUREE"] + "\nDescription :  " + SdrListe["DESCRIPTION"];
-                    MessageBox.Show(nb1, "OK");
+                    this.toolTip2.SetToolTip(this.PbxDevCouche, nb1);
                 }
 
             }
@@ -925,7 +932,7 @@ namespace BCA_MUSCUTIME
             MaDeconnexion();
         }
 
-        private void PbxInfoPompes_Click(object sender, EventArgs e)
+        public void InfoPompes()
         {
             MaConnexion();
             #region exécution de la requête de selection : nombre de villageois
@@ -947,9 +954,8 @@ namespace BCA_MUSCUTIME
                 while (SdrListe.Read())
                 {
                     nb1 = "Description de l'exercice " + SdrListe["NOM"] + "\nNom : " + SdrListe["NOM"] + "\nDurée : " + SdrListe["DUREE"] + "\nDescription :  " + SdrListe["DESCRIPTION"];
-                    MessageBox.Show(nb1, "OK");
+                    this.toolTip2.SetToolTip(this.PbxPompes, nb1);
                 }
-
             }
             catch (System.Data.SqlClient.SqlException probleme)
             {
@@ -959,7 +965,7 @@ namespace BCA_MUSCUTIME
             MaDeconnexion();
         }
 
-        private void PbxInfoSquats_Click(object sender, EventArgs e)
+        public void InfoSquats()
         {
             MaConnexion();
             #region exécution de la requête de selection : nombre de villageois
@@ -981,7 +987,7 @@ namespace BCA_MUSCUTIME
                 while (SdrListe.Read())
                 {
                     nb1 = "Description de l'exercice " + SdrListe["NOM"] + "\nNom : " + SdrListe["NOM"] + "\nDurée : " + SdrListe["DUREE"] + "\nDescription :  " + SdrListe["DESCRIPTION"];
-                    MessageBox.Show(nb1, "OK");
+                    this.toolTip2.SetToolTip(this.PbxSquats, nb1);
                 }
 
             }
@@ -993,7 +999,7 @@ namespace BCA_MUSCUTIME
             MaDeconnexion();
         }
 
-        private void PbxInfoTractions_Click(object sender, EventArgs e)
+        public void InfoTractions()
         {
             MaConnexion();
             #region exécution de la requête de selection : nombre de villageois
@@ -1015,7 +1021,7 @@ namespace BCA_MUSCUTIME
                 while (SdrListe.Read())
                 {
                     nb1 = "Description de l'exercice " + SdrListe["NOM"] + "\nNom : " + SdrListe["NOM"] + "\nDurée : " + SdrListe["DUREE"] + "\nDescription :  " + SdrListe["DESCRIPTION"];
-                    MessageBox.Show(nb1, "OK");
+                    this.toolTip2.SetToolTip(this.PbxTractions, nb1);
                 }
 
             }
@@ -1026,5 +1032,6 @@ namespace BCA_MUSCUTIME
             #endregion
             MaDeconnexion();
         }
+
     }
 }

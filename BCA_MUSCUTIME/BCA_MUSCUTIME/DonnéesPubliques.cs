@@ -34,7 +34,16 @@ namespace BCA_MUSCUTIME
 
         // Temps des exo 
 
-        public static int SQUATS;
+        public static int SQUATS = 10;
+        public static int POMPES = 10;
+        public static int TRACTIONS = 20;
+        public static int COURSE = 60;
+        public static int DEVCOUCHE = 20;
+
+        public static int totaltempsexo = (SQUATS + POMPES + TRACTIONS + COURSE + DEVCOUCHE);
+
+        // Temps du programme
+        public static int TempsProg;
 
     }
 }

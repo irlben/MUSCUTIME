@@ -113,6 +113,7 @@ namespace BCA_MUSCUTIME
             #endregion
             MaDeconnexion();
             DonnéesPubliques.nom = TxtBoxNOM.Text;
+            DonnéesPubliques.TempsProg = int.Parse(TXTDUREE.Text);
             this.Hide();
             frmProgramme.Owner = this;
             frmProgramme.ShowDialog();

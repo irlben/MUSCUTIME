@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProgramme));
             this.LblNomProgramme = new System.Windows.Forms.Label();
             this.PbxCourse = new System.Windows.Forms.PictureBox();
@@ -67,11 +68,7 @@
             this.PbxPompes_POS3 = new System.Windows.Forms.PictureBox();
             this.PbxDevCouche_POS2 = new System.Windows.Forms.PictureBox();
             this.PbxCourse_POS1 = new System.Windows.Forms.PictureBox();
-            this.PbxInfoCourse = new System.Windows.Forms.PictureBox();
-            this.PbxInfoDevCouche = new System.Windows.Forms.PictureBox();
-            this.PbxInfoPompes = new System.Windows.Forms.PictureBox();
-            this.PbxInfoSquats = new System.Windows.Forms.PictureBox();
-            this.PbxInfoTractions = new System.Windows.Forms.PictureBox();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PbxCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxDevCouche)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxPompes)).BeginInit();
@@ -108,11 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxPompes_POS3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxDevCouche_POS2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCourse_POS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoCourse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoDevCouche)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoPompes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoSquats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoTractions)).BeginInit();
             this.SuspendLayout();
             // 
             // LblNomProgramme
@@ -506,71 +498,11 @@
             this.PbxCourse_POS1.TabIndex = 6;
             this.PbxCourse_POS1.TabStop = false;
             // 
-            // PbxInfoCourse
-            // 
-            this.PbxInfoCourse.Image = ((System.Drawing.Image)(resources.GetObject("PbxInfoCourse.Image")));
-            this.PbxInfoCourse.Location = new System.Drawing.Point(200, 93);
-            this.PbxInfoCourse.Name = "PbxInfoCourse";
-            this.PbxInfoCourse.Size = new System.Drawing.Size(39, 29);
-            this.PbxInfoCourse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxInfoCourse.TabIndex = 7;
-            this.PbxInfoCourse.TabStop = false;
-            this.PbxInfoCourse.Click += new System.EventHandler(this.PbxInfoCourse_Click);
-            // 
-            // PbxInfoDevCouche
-            // 
-            this.PbxInfoDevCouche.Image = ((System.Drawing.Image)(resources.GetObject("PbxInfoDevCouche.Image")));
-            this.PbxInfoDevCouche.Location = new System.Drawing.Point(374, 93);
-            this.PbxInfoDevCouche.Name = "PbxInfoDevCouche";
-            this.PbxInfoDevCouche.Size = new System.Drawing.Size(39, 29);
-            this.PbxInfoDevCouche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxInfoDevCouche.TabIndex = 8;
-            this.PbxInfoDevCouche.TabStop = false;
-            this.PbxInfoDevCouche.Click += new System.EventHandler(this.PbxInfoDevCouche_Click);
-            // 
-            // PbxInfoPompes
-            // 
-            this.PbxInfoPompes.Image = ((System.Drawing.Image)(resources.GetObject("PbxInfoPompes.Image")));
-            this.PbxInfoPompes.Location = new System.Drawing.Point(551, 93);
-            this.PbxInfoPompes.Name = "PbxInfoPompes";
-            this.PbxInfoPompes.Size = new System.Drawing.Size(39, 29);
-            this.PbxInfoPompes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxInfoPompes.TabIndex = 9;
-            this.PbxInfoPompes.TabStop = false;
-            this.PbxInfoPompes.Click += new System.EventHandler(this.PbxInfoPompes_Click);
-            // 
-            // PbxInfoSquats
-            // 
-            this.PbxInfoSquats.Image = ((System.Drawing.Image)(resources.GetObject("PbxInfoSquats.Image")));
-            this.PbxInfoSquats.Location = new System.Drawing.Point(727, 93);
-            this.PbxInfoSquats.Name = "PbxInfoSquats";
-            this.PbxInfoSquats.Size = new System.Drawing.Size(39, 29);
-            this.PbxInfoSquats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxInfoSquats.TabIndex = 10;
-            this.PbxInfoSquats.TabStop = false;
-            this.PbxInfoSquats.Click += new System.EventHandler(this.PbxInfoSquats_Click);
-            // 
-            // PbxInfoTractions
-            // 
-            this.PbxInfoTractions.Image = ((System.Drawing.Image)(resources.GetObject("PbxInfoTractions.Image")));
-            this.PbxInfoTractions.Location = new System.Drawing.Point(903, 93);
-            this.PbxInfoTractions.Name = "PbxInfoTractions";
-            this.PbxInfoTractions.Size = new System.Drawing.Size(39, 29);
-            this.PbxInfoTractions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxInfoTractions.TabIndex = 11;
-            this.PbxInfoTractions.TabStop = false;
-            this.PbxInfoTractions.Click += new System.EventHandler(this.PbxInfoTractions_Click);
-            // 
             // FrmProgramme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 613);
-            this.Controls.Add(this.PbxInfoTractions);
-            this.Controls.Add(this.PbxInfoSquats);
-            this.Controls.Add(this.PbxInfoPompes);
-            this.Controls.Add(this.PbxInfoDevCouche);
-            this.Controls.Add(this.PbxInfoCourse);
             this.Controls.Add(this.GbxProgramme);
             this.Controls.Add(this.PbxTractions);
             this.Controls.Add(this.PbxSquats);
@@ -617,11 +549,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxPompes_POS3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxDevCouche_POS2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxCourse_POS1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoCourse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoDevCouche)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoPompes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoSquats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxInfoTractions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,11 +593,7 @@
         private System.Windows.Forms.PictureBox Pbx_POS3_CLOSE;
         private System.Windows.Forms.PictureBox Pbx_POS2_CLOSE;
         private System.Windows.Forms.PictureBox Pbx_POS1_CLOSE;
-        private System.Windows.Forms.PictureBox PbxInfoCourse;
-        private System.Windows.Forms.PictureBox PbxInfoDevCouche;
-        private System.Windows.Forms.PictureBox PbxInfoPompes;
-        private System.Windows.Forms.PictureBox PbxInfoSquats;
-        private System.Windows.Forms.PictureBox PbxInfoTractions;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
